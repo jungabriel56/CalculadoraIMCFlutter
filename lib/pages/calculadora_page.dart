@@ -1,5 +1,5 @@
 import 'package:calculadora_imc/components/custom_card.dart';
-import 'package:calculadora_imc/components/gender.dart';
+import 'package:calculadora_imc/components/gender_select.dart';
 import 'package:calculadora_imc/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +23,13 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: CustomCard(child: CustomGenderM())),
-                Expanded(child: CustomCard(child: CustomGenderF())),
+                Expanded(child: CustomCard(child: CustomGender(
+                  icon: Icons.male,
+                  gender: 'Masculino',))),
+                Expanded(child: CustomCard(child: CustomGender(
+                  icon: Icons.female,
+                  gender: 'Feminino',
+                ))),
               ],
             ),
           ),
