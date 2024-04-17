@@ -1,12 +1,10 @@
+import '../constants.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
-class CustomGender extends StatelessWidget {
+class GenderContent extends StatelessWidget {
   final IconData icon;
-  final String gender;
-
-  const CustomGender({super.key, required this.icon, required this.gender});
+  final String label;
+  const GenderContent({super.key, required this.icon, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +13,13 @@ class CustomGender extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 110,
+          size: 80.0,
         ),
         SizedBox(
-          height: 15,
+          height: 15.0,
         ),
         Text(
-          gender,
+          label,
           style: labelTextStyle,
         )
       ],
